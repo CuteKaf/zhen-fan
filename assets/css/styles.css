@@ -1,16 +1,15 @@
 /* ==== Base layout ==== */
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-               Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  color: #1f2937;
+  color: #333;
   background-color: #f9fafb;
   line-height: 1.6;
 }
 
 .main-container {
-  max-width: 900px;
+  max-width: 1000px; /*稍微加宽一点以适应三列布局*/
   margin: 0 auto;
   padding: 40px 24px 60px;
   background-color: #ffffff;
@@ -20,7 +19,7 @@ body {
 
 /* ==== Header & Nav ==== */
 .site-header {
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid #eee;
   margin-bottom: 40px;
   padding-bottom: 20px;
 }
@@ -28,14 +27,13 @@ body {
 .site-title {
   font-size: 2.2rem;
   font-weight: 700;
+  color: #111;
   margin: 0;
-  letter-spacing: -0.02em;
-  color: #111827;
 }
 
 .site-subtitle {
   margin-top: 8px;
-  color: #6b7280;
+  color: #666;
   font-size: 1rem;
 }
 
@@ -43,13 +41,13 @@ body {
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px;
 }
 
 .navbar a {
   text-decoration: none;
-  color: #4b5563;
-  padding: 6px 14px;
+  color: #555;
+  padding: 8px 16px;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 500;
@@ -57,156 +55,182 @@ body {
 }
 
 .navbar a:hover {
-  background-color: #f3f4f6;
-  color: #111827;
+  background-color: #f0f0f0;
+  color: #000;
 }
 
 .navbar a.active {
-  background-color: #111827;
-  color: #ffffff;
+  background-color: #111;
+  color: #fff;
 }
 
-/* ==== Sections & Typography ==== */
+/* ==== Sections ==== */
 section {
-  margin-bottom: 48px;
+  margin-bottom: 50px;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 600;
-  color: #111827;
-  margin-bottom: 16px;
-  border-left: 4px solid #2563eb;
-  padding-left: 12px;
+  color: #111;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #f0f0f0;
 }
 
 p {
   margin-bottom: 16px;
-  color: #374151;
+  color: #444;
 }
 
-.highlight {
-  font-weight: 600;
-  color: #111827;
-}
-
-.small-muted {
-  font-size: 0.9rem;
-  color: #6b7280;
-}
-
-ul, ol {
+ul {
   padding-left: 20px;
-  color: #374151;
+  color: #444;
 }
 
 li {
   margin-bottom: 8px;
 }
 
-/* ==== About Section (Split Layout) ==== */
-.about-container {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
+.highlight {
+  font-weight: 600;
+  color: #000;
 }
 
-.about-text {
-  flex: 1;
+.small-muted {
+  font-size: 0.9rem;
+  color: #777;
 }
 
-.about-photo {
-  flex: 0 0 220px;
+/* ==== Research Page Layout (Will Zhang Style) ==== */
+/* 三列布局容器 */
+.research-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 强制三列 */
+  gap: 30px;
+  margin-top: 30px;
 }
 
-.about-photo img {
-  width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  border: 1px solid #e5e7eb;
-}
-
-/* ==== Project Cards ==== */
-.project-card {
+/* 单个研究卡片 */
+.research-card {
+  background: #fff;
   display: flex;
   flex-direction: column;
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
+}
+
+.research-figure {
+  width: 100%;
+  margin-bottom: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
   overflow: hidden;
-  margin-bottom: 40px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   transition: transform 0.2s;
 }
 
-.project-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+.research-figure:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.project-image {
-  width: 100%;
-  background-color: #f3f4f6;
-  border-bottom: 1px solid #e5e7eb;
-}
-
-.project-image img {
+.research-figure img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.project-content {
-  padding: 24px;
-}
-
-.project-title {
-  font-size: 1.25rem;
+.research-card h3 {
+  font-size: 1.1rem;
   font-weight: 700;
-  margin-top: 0;
-  margin-bottom: 8px;
-  color: #111827;
+  margin: 0 0 8px 0;
+  color: #111;
+  line-height: 1.3;
 }
 
-.tags {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
+.research-card .tags {
+  margin-bottom: 10px;
 }
 
-.tag {
-  background-color: #eff6ff;
-  color: #2563eb;
+.research-card .tag {
   font-size: 0.75rem;
-  padding: 2px 8px;
-  border-radius: 999px;
-  font-weight: 600;
+  background-color: #f3f4f6;
+  color: #555;
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-right: 5px;
+  display: inline-block;
 }
 
-/* ==== Publications ==== */
-.pub-item {
-  margin-bottom: 24px;
-  padding-bottom: 24px;
-  border-bottom: 1px dashed #e5e7eb;
+.research-card p {
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
 }
-.pub-item:last-child {
+
+/* 顶部 Vision 区域 */
+.research-vision {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 50px;
+}
+.research-vision h2 {
   border-bottom: none;
 }
-.pub-title { font-weight: 600; color: #111827; font-size: 1.05rem; margin-bottom: 4px; }
-.pub-meta { font-size: 0.95rem; color: #4b5563; }
+
+/* ==== Project List Layout ==== */
+.project-item {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 40px;
+}
+.project-item:last-child {
+  border-bottom: none;
+}
+.project-img {
+  flex: 0 0 280px;
+}
+.project-img img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #eee;
+}
+.project-info {
+  flex: 1;
+}
 
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
+  /* 手机上变成单列 */
+  .research-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-item {
+    flex-direction: column;
+  }
+  .project-img {
+    width: 100%;
+  }
   .about-container {
     flex-direction: column-reverse;
-    align-items: center;
   }
-  .about-photo {
-    flex: auto;
-    width: 100%;
-    max-width: 300px;
-    margin-bottom: 20px;
-  }
-  .site-title { font-size: 1.8rem; }
 }
+
+/* ==== About & Profile ==== */
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+.about-text { flex: 1; }
+.about-photo { flex: 0 0 200px; }
+.about-photo img {
+  width: 100%;
+  border-radius: 50%; /* 圆形头像，如喜欢方形可改为 8px */
+  border: 1px solid #eee;
+}
+
+/* ==== Publications ==== */
+.pub-item { margin-bottom: 20px; }
+.pub-title { font-weight: 600; color: #000; }

@@ -171,18 +171,20 @@ li { margin-bottom: 8px; }
   margin-bottom: 8px;
 }
 
-/* ==== About / Profile / Pubs (保持不变) ==== */
+/* ==== About / Profile / Pubs (图片样式调整) ==== */
 .about-container {
   display: flex;
   gap: 40px;
   align-items: flex-start;
 }
 .about-text { flex: 1; }
-.about-photo { flex: 0 0 200px; }
+.about-photo { flex: 0 0 240px; } /* 稍微加宽一点给方形照片 */
+
 .about-photo img {
   width: 100%;
-  border-radius: 50%;
+  border-radius: 12px; /* 【关键修改】不再是 50% 圆形，改为圆角矩形 */
   border: 1px solid #eee;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* 增加一点阴影质感 */
 }
 
 .pub-item { margin-bottom: 20px; }
@@ -190,10 +192,18 @@ li { margin-bottom: 8px; }
 
 /* ==== Responsive ==== */
 @media (max-width: 768px) {
+  /* Research Grid 变单列 */
   .research-overview-grid { grid-template-columns: 1fr; }
   
-  /* 手机端保持上图下文，只是间距微调 */
+  /* Project 列表变竖排 */
   .project-item { gap: 15px; }
   
+  /* 手机上图片高度微调 */
+  .project-img-wrapper img { height: auto; }
+
+  /* About 区域变竖排 */
   .about-container { flex-direction: column-reverse; }
+  
+  /* 手机上头像宽度自适应 */
+  .about-photo { width: 100%; max-width: 300px; margin: 0 auto; }
 }

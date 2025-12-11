@@ -1,0 +1,212 @@
+/* ==== Base layout ==== */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+  background-color: #f9fafb;
+  line-height: 1.6;
+}
+
+.main-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px 60px;
+  background-color: #ffffff;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0,0,0,0.02);
+}
+
+/* ==== Header & Nav ==== */
+.site-header {
+  border-bottom: 1px solid #e5e7eb;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+}
+
+.site-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: -0.02em;
+  color: #111827;
+}
+
+.site-subtitle {
+  margin-top: 8px;
+  color: #6b7280;
+  font-size: 1rem;
+}
+
+.navbar {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #4b5563;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.navbar a:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.navbar a.active {
+  background-color: #111827;
+  color: #ffffff;
+}
+
+/* ==== Sections & Typography ==== */
+section {
+  margin-bottom: 48px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 16px;
+  border-left: 4px solid #2563eb;
+  padding-left: 12px;
+}
+
+p {
+  margin-bottom: 16px;
+  color: #374151;
+}
+
+.highlight {
+  font-weight: 600;
+  color: #111827;
+}
+
+.small-muted {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+ul, ol {
+  padding-left: 20px;
+  color: #374151;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ==== About Section (Split Layout) ==== */
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-photo {
+  flex: 0 0 220px;
+}
+
+.about-photo img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
+}
+
+/* ==== Project Cards ==== */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+  transition: transform 0.2s;
+}
+
+.project-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+}
+
+.project-image {
+  width: 100%;
+  background-color: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.project-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-content {
+  padding: 24px;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: #111827;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  background-color: #eff6ff;
+  color: #2563eb;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+/* ==== Publications ==== */
+.pub-item {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px dashed #e5e7eb;
+}
+.pub-item:last-child {
+  border-bottom: none;
+}
+.pub-title { font-weight: 600; color: #111827; font-size: 1.05rem; margin-bottom: 4px; }
+.pub-meta { font-size: 0.95rem; color: #4b5563; }
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .about-photo {
+    flex: auto;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+  .site-title { font-size: 1.8rem; }
+}

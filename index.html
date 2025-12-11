@@ -2,57 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Zhen Fan</title>
+  <title>Zhen Fan – Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
-                   Helvetica, Arial, sans-serif;
-      max-width: 900px;
-      margin: 50px auto;
-      padding: 0 20px;
-      line-height: 1.6;
-      color: #222;
-    }
-    h1 { font-size: 2.2em; }
-    h2 { margin-top: 2em; }
-    a { color: #0056b3; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<div class="main-container">
 
-<h1>Zhen Fan</h1>
-<p>
-M.Sc. in Mechanical Engineering <br>
-Research Interests: Human-Robot Collaboration, Vision-Language-Action Models,
-Simulation-to-Real Transfer, Explainable Robotics
-</p>
+  <header class="site-header">
+    <h1 class="site-title">Zhen Fan</h1>
+    <div class="site-subtitle">
+      M.Sc. in Mechanical Engineering, National University of Singapore (NUS) <br>
+      Research Interests: Human–Robot Collaboration, Vision-Language-Action Models,
+      Simulation-to-Real Transfer, Explainable Robotics
+    </div>
+    <nav class="navbar">
+      <a href="index.html" class="active">Home</a>
+      <a href="research.html">Research</a>
+      <a href="publications.html">Publications</a>
+      <a href="projects.html">Projects</a>
+      <a href="cv.html">CV</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
 
-<h2>Research</h2>
-<p>
-I am interested in building human-like collaboration systems between humans and robots.
-My research focuses on integrating multimodal perception, high-level reasoning,
-and structured representations to enable interpretable and reliable robot decision-making
-in real-world manufacturing scenarios.
-</p>
+  <section>
+    <h2>About</h2>
+    <p>
+      I am interested in building <span class="highlight">human-like collaboration systems</span>
+      between humans and robots. My research focuses on integrating
+      <span class="highlight">multimodal perception</span>,
+      <span class="highlight">high-level reasoning</span>, and
+      <span class="highlight">structured semantic representations</span>
+      to enable interpretable and reliable robot decision-making in real-world
+      manufacturing scenarios.
+    </p>
+    <p>
+      Recently, I have worked on Omniverse-based digital twins and simulation pipelines
+      for metal additive manufacturing, multimodal knowledge graphs for technical
+      documentation, and vision-language-action models for human–robot collaboration.
+    </p>
+  </section>
 
-<h2>Projects</h2>
-<ul>
-  <li><b>AMSim2Real</b>: Simulation-driven human action recognition for metal additive manufacturing.</li>
-  <li><b>MetalMind</b>: Knowledge-graph-enhanced digital twins for human-robot collaboration.</li>
-</ul>
+  <section>
+    <h2>Research Highlights</h2>
+    <ul>
+      <li>
+        <span class="highlight">Human–Robot Collaboration (HRC)</span>:
+        XR/digital-twin interfaces that allow humans to teach, supervise and recover robot behaviors.
+      </li>
+      <li>
+        <span class="highlight">Vision-Language-Action (VLA)</span>:
+        leveraging large multimodal models to ground task semantics and robot skills in real factories.
+      </li>
+      <li>
+        <span class="highlight">Sim2Real and Synthetic Data</span>:
+        using high-fidelity simulators to reduce data collection cost while preserving real-world performance.
+      </li>
+      <li>
+        <span class="highlight">Explainable Robotics</span>:
+        task semantic graphs and knowledge graphs for transparent, auditable robot decision-making.
+      </li>
+    </ul>
+  </section>
 
-<h2>CV</h2>
-<p>
-<a href="#">Curriculum Vitae (PDF)</a>
-</p>
+  <section>
+    <h2>Selected Projects</h2>
+    <ul>
+      <li>
+        <b>AMSim2Real</b> – Simulation-driven human action recognition for metal additive manufacturing,
+        bridging virtual demonstrations and real operators on a 3D metal printer.
+      </li>
+      <li>
+        <b>MetalMind</b> – Knowledge-graph-enhanced digital twins that connect technical documents,
+        human procedures and robot skills in industrial environments.
+      </li>
+    </ul>
+    <p class="small-muted">
+      See the <a href="projects.html">Projects</a> page for more details.
+    </p>
+  </section>
 
-<h2>Contact</h2>
-<p>
-Email: yourname@email.com <br>
-GitHub: <a href="https://github.com/yourname">yourname</a>
-</p>
+  <section>
+    <h2>News</h2>
+    <ul>
+      <li>[YYYY-MM] Drafting a manuscript on XR-enabled, explainable HRC for metal additive manufacturing.</li>
+      <li>[YYYY-MM] Building a synthetic video dataset for VLM/VLA training in manufacturing scenarios.</li>
+    </ul>
+  </section>
 
+</div>
 </body>
 </html>

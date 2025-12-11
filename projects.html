@@ -23,37 +23,59 @@
   </header>
 
   <article class="project-item">
-    <div class="project-img">
+    <div class="project-img-wrapper">
       <img src="assets/img/proj_sim2real.png" alt="Sim2Know">
     </div>
     <div class="project-info">
-      <h3>Sim2Know: Digital Twins for Action Recognition</h3>
+      <h3 class="project-title">Sim2Know: Digital Twins for Action Recognition</h3>
+      
+      <div class="tags">
+        <span class="tag">NVIDIA Omniverse</span>
+        <span class="tag">Synthetic Data</span>
+        <span class="tag">Sim-to-Real</span>
+      </div>
+
       <p><strong>Challenge:</strong> Collecting labeled real-world data for manufacturing is resource-intensive.</p>
-      <p><strong>Method:</strong> Built a high-fidelity Digital Twin of a metal AM system to generate synthetic human action data. Trained a V-JEPA model using transfer learning.</p>
+      <p><strong>Method:</strong> Built a high-fidelity Digital Twin of a metal AM system to generate synthetic human action data. Trained a V-JEPA model using transfer learning with a mix of synthetic and real data.</p>
       <p class="small-muted">Submitted to CIRP Annals 2025.</p>
     </div>
   </article>
 
   <article class="project-item">
-    <div class="project-img">
+    <div class="project-img-wrapper">
       <img src="assets/img/proj_metalmind.png" alt="MetalMind">
     </div>
     <div class="project-info">
-      <h3>MetalMind: Human-Centric Knowledge System</h3>
+      <h3 class="project-title">MetalMind: Human-Centric Knowledge System</h3>
+      
+      <div class="tags">
+        <span class="tag">Knowledge Graph</span>
+        <span class="tag">LLM Agents</span>
+        <span class="tag">RAG</span>
+        <span class="tag">Neo4j</span>
+      </div>
+
       <p><strong>Challenge:</strong> Expert knowledge is often "implicit" or locked in unstructured PDF manuals.</p>
-      <p><strong>Method:</strong> Developed an automated pipeline using LLMs to extract entities and build a structured Knowledge Graph (3,102 Nodes) with Hybrid Retrieval.</p>
+      <p><strong>Method:</strong> Developed an automated pipeline using LLMs to extract entities and build a structured Knowledge Graph (3,102 Nodes). Implemented a Hybrid Retrieval strategy (Vector + Graph) for better context.</p>
       <p class="small-muted">Submitted to npj Advanced Manufacturing.</p>
     </div>
   </article>
 
   <article class="project-item">
-    <div class="project-img">
+    <div class="project-img-wrapper">
       <img src="assets/img/proj_proposal.png" alt="Proposal">
     </div>
     <div class="project-info">
-      <h3>Research Proposal: Neuro-Symbolic Alignment</h3>
-      <p><strong>Vision:</strong> Addressing the "Black Box" issue of VLA models in safety-critical industries.</p>
-      <p><strong>Framework:</strong> A Neuro-Symbolic Bridge that uses Task Semantic Graphs (TSG) to verify probabilistic neural intents against deterministic safety constraints.</p>
+      <h3 class="project-title">Research Proposal: Neuro-Symbolic Alignment</h3>
+      
+      <div class="tags">
+        <span class="tag">VLA Models</span>
+        <span class="tag">Explainable AI</span>
+        <span class="tag">Task Semantic Graphs</span>
+      </div>
+
+      <p><strong>Vision:</strong> End-to-end VLA models act as "Black Boxes," posing risks in safety-critical industrial environments.</p>
+      <p><strong>Framework:</strong> A Neuro-Symbolic Bridge that uses <strong>Task Semantic Graphs (TSG)</strong> to verify probabilistic neural intents against deterministic safety constraints.</p>
     </div>
   </article>
 

@@ -5,6 +5,12 @@
   <title>Zhen Fan – Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <style>
+    /* 增加一点 Education 专属的简单样式，不需要改 css 文件也能生效 */
+    .edu-item { margin-bottom: 12px; }
+    .edu-school { font-weight: 700; color: #111; font-size: 1.05rem; }
+    .edu-meta { color: #555; font-size: 0.95rem; }
+  </style>
 </head>
 <body>
 <div class="main-container">
@@ -29,40 +35,24 @@
     <div class="about-text">
       <h2>About Me</h2>
       <p>
-        I am an M.Sc. graduate from the <strong>National University of Singapore (NUS)</strong> and a Digitalization Engineer focusing on <strong>simulation-driven multimodal learning</strong> for embodied intelligence.
+        I am an M.Sc. graduate from the <strong>National University of Singapore (NUS)</strong> and a Digitalization Engineer working on <strong>simulation-driven multimodal learning</strong> for embodied intelligence.
       </p>
 
       <p>
-        My work centers on building <strong>high-fidelity digital twins</strong>, <strong>world model–driven synthetic data pipelines</strong>, and <strong>multimodal perception systems</strong> to bridge the gap between virtual environments and real-world robotics.
+        My research focuses on <strong>high-fidelity Digital Twins</strong>, <strong>world-model-based synthetic data generation</strong>, and <strong>Sim-to-Real perception systems</strong> for industrial robotics.
       </p>
 
       <p>
-        I work extensively with <strong>NVIDIA Omniverse (Isaac Sim)</strong> to develop industrial-grade Digital Twins and automated simulation workflows. 
-        I also leverage <strong>NVIDIA COSMOS</strong> as a world model, integrating video generation and scene imagination into a scalable <strong>synthetic-data pipeline</strong> for VLM and action recognition training.
+        I work with <strong>NVIDIA Omniverse (Isaac Sim)</strong> and <strong>COSMOS</strong> to build scalable simulation pipelines, and I contributed to a Sim-to-Real action recognition framework validated at <strong>90.31% accuracy</strong> in a real factory environment.
       </p>
 
       <p>
-        I contributed to a <strong>Sim-to-Real action recognition framework</strong> that achieved <strong>90.31% accuracy</strong> in real-world factory validation, demonstrating the effectiveness of simulation-guided training in data-scarce industrial environments.
-      </p>
-
-      <p>
-        Broadly, I am interested in combining simulation, multimodal models, and structured knowledge to improve generalization, safety, and interpretability in embodied agents. 
-        My long-term goal is to extend these methods toward <strong>Human–Robot Collaboration (HRC)</strong>, enabling robots to learn complex and interactive behaviors in virtual environments before deployment.
+        My broader research interest lies in combining simulation, multimodal models, and structured knowledge to enable explainable and safety-aware embodied AI, with long-term applications in <strong>Human–Robot Collaboration</strong>.
       </p>
       
-      <div style="margin-top: 25px; padding: 20px; background: #f8f9fa; border-radius: 8px; font-size: 0.95rem; border: 1px solid #eee;">
-        <ul style="margin: 0; padding-left: 20px;">
-          <li style="margin-bottom: 10px;">
-            <strong>Simulation & Digital Twin:</strong> NVIDIA Omniverse (Isaac Sim), high-fidelity modeling, industrial scene reconstruction, asset binding.
-          </li>
-          <li style="margin-bottom: 10px;">
-            <strong>World Models & Synthetic Data Generation:</strong> NVIDIA COSMOS world model (video generation, scene imagination), automated pipelines, domain randomization, large-scale dataset construction.
-          </li>
-          <li style="margin-bottom: 0;">
-            <strong>Sim-to-Real Transfer:</strong> Contributed to a real-world validated action recognition system (<strong>90.31% accuracy</strong>), VLM training, synthetic-to-real generalization, reality gap reduction.
-          </li>
-        </ul>
-      </div>
+      <p style="margin-top: 20px; color: #4b5563; font-size: 0.95rem;">
+        <strong>Research Areas:</strong> Digital Twin · World Models · Synthetic Data · Sim2Real · Multimodal Learning · Embodied AI
+      </p>
 
       <p style="margin-top: 24px;">
         <a href="projects.html" style="color: #2563eb; font-weight: 600; text-decoration: none;">View My Projects →</a>
@@ -74,12 +64,25 @@
   </section>
 
   <section>
+    <h2>Education</h2>
+    
+    <div class="edu-item">
+      <div class="edu-school">National University of Singapore (NUS)</div>
+      <div class="edu-meta">M.Sc. in Mechanical Engineering (2024 – 2025)</div>
+    </div>
+
+    <div class="edu-item">
+      <div class="edu-school">Beijing Jiaotong University (BJTU)</div>
+      <div class="edu-meta">B.Eng. in Mechatronics Engineering (2020 – 2024)</div>
+    </div>
+  </section>
+
+  <section>
     <h2>News</h2>
     <ul>
       <li><strong>[2025.06]</strong> Graduating from NUS with an M.Sc. in Mechanical Engineering.</li>
-      <li><strong>[2025.04]</strong> Paper <em>"Sim2Know: A Neuro-Symbolic Digital Twin Framework"</em> submitted to <strong>CIRP Annals</strong>.</li>
-      <li><strong>[2025.01]</strong> Paper <em>"MetalMind: Cognitive Simulation for Industrial Knowledge Parsing"</em> submitted to <strong>npj Advanced Manufacturing</strong>.</li>
-      <li><strong>[2024.10]</strong> Achieving 90.31% accuracy in Sim2Real Action Recognition using synthetic data.</li>
+      <li><strong>[2025.04]</strong> Paper <em>"Sim2Know"</em> submitted to <strong>CIRP Annals</strong>.</li>
+      <li><strong>[2025.01]</strong> Paper <em>"MetalMind"</em> submitted to <strong>npj Advanced Manufacturing</strong>.</li>
     </ul>
   </section>
 

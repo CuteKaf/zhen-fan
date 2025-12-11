@@ -4,16 +4,14 @@
   <meta charset="UTF-8">
   <title>Zhen Fan – Projects</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
 <div class="main-container">
 
   <header class="site-header">
     <h1 class="site-title">Zhen Fan</h1>
-    <div class="site-subtitle">
-      Selected Research Projects
-    </div>
+    <div class="site-subtitle">Selected Projects</div>
     <nav class="navbar">
       <a href="index.html">Home</a>
       <a href="research.html">Research</a>
@@ -24,54 +22,73 @@
     </nav>
   </header>
 
-  <section>
-    <h2>AMSim2Real: Action Recognition for Metal AM</h2>
-    <p class="small-muted">
-      Simulation-driven human action recognition · Digital twin · Human–Robot Collaboration
-    </p>
-    <p>
-      AMSim2Real is a pipeline that uses a high-fidelity Omniverse digital twin of a
-      metal additive manufacturing system to generate synthetic human action data.
-      The goal is to recognize real operators’ actions around the metal 3D printer,
-      enabling robots and digital assistants to respond appropriately and safely.
-    </p>
-    <ul>
-      <li>Digital twin of the metal AM system with realistic kinematics and workspace.</li>
-      <li>Large-scale synthetic videos of human actions for training recognition models.</li>
-      <li>Validation on real human operation videos with strong Sim2Real performance.</li>
-    </ul>
-  </section>
+  <article class="project-card">
+    <div class="project-image">
+      <img src="assets/img/proj_sim2real.png" alt="Sim2Know Framework">
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Sim2Know: Digital Twins for Action Recognition</h3>
+      <div class="tags">
+        <span class="tag">Sim-to-Real</span>
+        <span class="tag">NVIDIA Omniverse</span>
+        <span class="tag">Synthetic Data</span>
+      </div>
+      <p>
+        <strong>Challenge:</strong> Collecting labeled real-world data for manufacturing is resource-intensive[cite: 97].
+      </p>
+      <p>
+        <strong>Method:</strong> Built a high-fidelity Digital Twin of a metal AM system to generate synthetic human action data. 
+        Trained a V-JEPA model using transfer learning with a mix of synthetic and real data[cite: 101].
+      </p>
+      <p class="small-muted">
+        <strong>Result:</strong> Achieved <strong>90.31% accuracy</strong> with only small amounts of real data. Submitted to CIRP Annals 2025[cite: 101, 109].
+      </p>
+    </div>
+  </article>
 
-  <section>
-    <h2>MetalMind: Knowledge-Graph-Enhanced Digital Twin</h2>
-    <p class="small-muted">
-      Knowledge graphs · Technical documentation · Explainable HRC
-    </p>
-    <p>
-      MetalMind connects digital twins with domain knowledge extracted from manuals,
-      standard operating procedures and human expertise. The system builds a
-      <span class="highlight">knowledge graph</span> over tasks, equipment, safety rules
-      and human actions, which is then used for planning and explanation.
-    </p>
-    <ul>
-      <li>NER and relation extraction pipelines for industrial documents.</li>
-      <li>Task semantic graph for assembly and maintenance procedures.</li>
-      <li>Graph-based safety and explainability layer for robot policies.</li>
-    </ul>
-  </section>
+  <article class="project-card">
+    <div class="project-image">
+      <img src="assets/img/proj_metalmind.png" alt="MetalMind Knowledge Graph">
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">MetalMind: Human-Centric Knowledge System</h3>
+      <div class="tags">
+        <span class="tag">Knowledge Graph</span>
+        <span class="tag">LLM Agents</span>
+        <span class="tag">RAG</span>
+      </div>
+      <p>
+        <strong>Challenge:</strong> Expert knowledge is often "implicit" or locked in unstructured PDF manuals, making it hard for robots/agents to access[cite: 115].
+      </p>
+      <p>
+        <strong>Method:</strong> Developed an automated pipeline using LLMs to extract entities and build a structured Knowledge Graph (3,102 Nodes). 
+        Implemented a Hybrid Retrieval strategy (Vector + Graph)[cite: 118, 124].
+      </p>
+      <p class="small-muted">
+        <strong>Result:</strong> Outperformed standard vector retrieval by <strong>336%</strong> in global understanding. Submitted to npj Advanced Manufacturing[cite: 119].
+      </p>
+    </div>
+  </article>
 
-  <section>
-    <h2>Synthetic Video Generation for VLM/VLA</h2>
-    <p class="small-muted">
-      Multimodal data · VLM/VLA adaptation · Manufacturing scenes
-    </p>
-    <p>
-      I use text-to-video models and controlled scene generation to create synthetic
-      video datasets for training and adapting vision–language(–action) models
-      to manufacturing domains. Prompts cover a wide range of industrial tasks and
-      spatial relations, enabling better grounding of spatial reasoning for robots.
-    </p>
-  </section>
+  <article class="project-card">
+    <div class="project-image">
+      <img src="assets/img/proj_proposal.png" alt="Neuro-Symbolic Alignment">
+    </div>
+    <div class="project-content">
+      <h3 class="project-title">Research Proposal: Neuro-Symbolic Alignment</h3>
+      <div class="tags">
+        <span class="tag">VLA Models</span>
+        <span class="tag">Explainable AI</span>
+        <span class="tag">Task Semantic Graphs</span>
+      </div>
+      <p>
+        <strong>Vision:</strong> End-to-end VLA models act as "Black Boxes," posing risks in safety-critical industrial environments[cite: 127].
+      </p>
+      <p>
+        <strong>Proposed Framework:</strong> A Neuro-Symbolic Bridge that uses <strong>Task Semantic Graphs (TSG)</strong> to verify probabilistic neural intents against deterministic safety constraints[cite: 146, 150].
+      </p>
+    </div>
+  </article>
 
 </div>
 </body>

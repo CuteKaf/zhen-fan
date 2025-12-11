@@ -129,12 +129,16 @@ li { margin-bottom: 8px; }
 .project-item:last-child { border-bottom: none; }
 
 .project-img-wrapper {
-  flex: 0 0 300px; /* 固定图片宽度 */
+  flex: 0 0 300px; /* 固定图片容器宽度 */
 }
+
 .project-img-wrapper img {
-  width: 100%;
+  width: 100%;         /* 撑满容器宽度 */
+  height: 200px;       /* 【关键】固定高度，防止图片过高 */
+  object-fit: cover;   /* 【关键】自动裁切填充，防止变形 */
   border-radius: 8px;
   border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 .project-info { flex: 1; }
@@ -162,18 +166,37 @@ li { margin-bottom: 8px; }
   margin-bottom: 6px;
 }
 
-/* ==== Responsive ==== */
-@media (max-width: 768px) {
-  .research-overview-grid { grid-template-columns: 1fr; }
-  .project-item { flex-direction: column; }
-  .project-img-wrapper { width: 100%; flex: auto; }
-  .about-container { flex-direction: column-reverse; }
+/* ==== About / Profile / Pubs ==== */
+.about-container {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
 }
-
-/* About/Profile/Pubs 保持不变 */
-.about-container { display: flex; gap: 40px; align-items: flex-start; }
 .about-text { flex: 1; }
 .about-photo { flex: 0 0 200px; }
-.about-photo img { width: 100%; border-radius: 50%; border: 1px solid #eee; }
+.about-photo img {
+  width: 100%;
+  border-radius: 50%; /* 圆形头像 */
+  border: 1px solid #eee;
+}
+
 .pub-item { margin-bottom: 20px; }
 .pub-title { font-weight: 600; color: #000; }
+
+/* ==== Responsive ==== */
+@media (max-width: 768px) {
+  /* Research Grid 变单列 */
+  .research-overview-grid { grid-template-columns: 1fr; }
+  
+  /* Project 列表变竖排 */
+  .project-item { flex-direction: column; gap: 20px; }
+  .project-img-wrapper { width: 100%; flex: auto; }
+  
+  /* 手机上图片高度稍微调小 */
+  .project-img-wrapper img {
+    height: 180px; 
+  }
+
+  /* About 区域变竖排 */
+  .about-container { flex-direction: column-reverse; }
+}
